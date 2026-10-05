@@ -10,7 +10,7 @@ I needed fast encryption for an Intel E2140. AES likely would've been slow and p
 
 ### Benchmarks
 
-#### Genuine Intel(R) CPU            2140  @ 1.60GHz
+#### Intel E2140
 
 |Algorithm|Key|Encryption|Decryption|
 |---------|---|----------|----------|
@@ -40,7 +40,7 @@ Sorted from quickest to slowest algorithm, numbers gathered through
 /sbin/cryptsetup benchmark --cipher aes-xts-plain64 --key-size 512
 ```
 
-Surprisingly, Serpent is pretty close to SPECK, and Adiantum is quicker, maybe this is all for nothing. Maybe this is why SPECK was removed from the Linux kernel. Adiantum is quicker and instills more confidence than a cipher with a round function consisting of 5 lines.
+Surprisingly, Serpent is pretty close to SPECK on the old E2140, and quicker on modern hardware. Adiantum is quicker, maybe this is all for nothing. Maybe this is why SPECK was removed from the Linux kernel. Adiantum is quicker and instills more confidence than a cipher with a round function consisting of 5 lines.
 
 ### Installation
 
